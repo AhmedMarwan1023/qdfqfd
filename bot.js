@@ -1,8 +1,8 @@
-const settings = require("./config.json"); 
 const Discord = require('discord.js');
-const initcmd = settings.initcmd;
-const id = settings.id;
 const client = new Discord.Client();
+
+const developers = ["510478269045538839"]
+const adminprefix = "$";
 
 client.on('ready', () => {
   console.log(`Hi ${client.user.tag} , This Code by : Kahrbaa `);
@@ -49,4 +49,4 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 
 
 
-client.login(settings.token);
+client.login(process.env.BOT_TOKEN);
